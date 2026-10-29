@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHub - Build Together</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: white;
+        }
+
+        /* Navigation */
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 480px;
+            padding: 90px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: radial-gradient(
+                circle at top right,
+                #25256b,
+                #0d1117 55%
+            );
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 65px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: #8b7bff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #c9d1d9;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px 8px 5px 0;
+            cursor: pointer;
+        }
+
+        .primary {
+            background: white;
+            color: #0d1117;
+        }
+
+        .secondary {
+            border: 1px solid #57606a;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* Code editor illustration */
+        .editor {
+            background: #161b22;
+            border: 1px solid #5268a5;
+            border-radius: 12px;
+            padding: 25px;
+            width: 420px;
+            max-width: 100%;
+            box-shadow: 0 15px 50px #3030a044;
+        }
+
+        .editor h3 {
+            color: #58a6ff;
+            margin-bottom: 20px;
+        }
+
+        .editor pre {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            color: #a5d6ff;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* Features */
+        .features {
+            background: #f6f8fa;
+            color: #111827;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #57606a;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border: 1px solid #d8dee4;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #57606a;
+            line-height: 1.6;
+        }
+
+        /* Call to action */
+        .cta {
+            text-align: center;
+            padding: 70px 20px;
+            background: #161b22;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #c9d1d9;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+        }
+
+        /* Mobile responsive design */
+        @media (max-width: 850px) {
+            header {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 60px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">⌘ DevHub</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>
+                Build Together<br>
+                on <span class="highlight">DevHub</span>
+            </h1>
+
+            <p>
+                Discover a world of coding and creativity.
+                Manage projects, collaborate with friends,
+                and build amazing websites together.
+            </p>
+
+            <a href="#start" class="btn primary">
+                Get Started →
+            </a>
+
+            <a href="#features" class="btn secondary">
+                Learn More
+            </a>
+        </div>
+
+        <div class="editor">
+            <h3>📁 my-first-project</h3>
+            <pre>
+01  &lt;html&gt;
+02    &lt;head&gt;
+03      &lt;title&gt;My Website&lt;/title&gt;
+04    &lt;/head&gt;
+05    &lt;body&gt;
+06      &lt;h1&gt;Hello World!&lt;/h1&gt;
+07      &lt;p&gt;Let's build something.&lt;/p&gt;
+08    &lt;/body&gt;
+09  &lt;/html&gt;
+            </pre>
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+
+        <h2>Everything You Need to Build</h2>
+
+        <p class="subtitle">
+            Simple tools to help you create and launch your ideas.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Version Control</h3>
+                <p>
+                    Track code changes and manage your projects
+                    as you develop them.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">👥</div>
+                <h3>Collaboration</h3>
+                <p>
+                    Share ideas, work with others, and
+                    improve your projects together.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>Security</h3>
+                <p>
+                    Learn good security practices and
+                    protect your project files.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Launch Website</h3>
+                <p>
+                    Publish your static website online
+                    using GitHub Pages.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta" id="start">
+        <h2>Ready to Start Building?</h2>
+
+        <p>
+            Turn your ideas into reality.
+            Begin your coding journey today!
+        </p>
+
+        <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn primary"
+        >
+            Open GitHub →
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <p>
+            © <span id="year"></span> DevHub Demo.
+            Created for learning and practice.
+        </p>
+        <p>This is a demo, not an official GitHub website.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
